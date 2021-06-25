@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 60px 40px;
-    grid-template-areas: 'tag tag tag title title title title title title title title '
+    grid-template-areas: 'tag tag tag title title title title title title title title .'
                         '. . . content content content content content content content content .';
     @include lg-block {
       grid-template-areas: 'tag tag tag tag tag tag tag tag tag tag tag tag'
@@ -41,8 +41,8 @@
       padding-bottom: 30px;
     }
 
-    h3{
-      @include sm-block{
+    h3 {
+      @include sm-block {
         font-family: Montserrat;
         text-transform: uppercase;
         font-weight: 500;

@@ -1,0 +1,132 @@
+.mmenu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 375px;
+  left: 0;
+  transform: translateX(-200%);
+  background-color: $bg;
+  overflow-y: auto;
+  padding: 25px 20px;
+  @include tr;
+  @include sm-block{
+    width: 100%;
+  }
+
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &__enter{
+    display: flex;
+    align-items: center;
+    color: $orange;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    svg{
+      margin-right: 10px;
+    }
+  }
+
+  &__center{
+    //overflow-y: auto;
+    //overflow-x: hidden;
+    margin-bottom: 50px;
+  }
+
+  &__nav{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: -11px 0;
+  }
+
+  &__item{
+
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &-name{
+      flex-grow: 1;
+      padding: 11px 0;
+      display: flex;
+      align-items: center;
+    }
+    &-btn{
+      width: 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__addr{
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  &__email,&__tel{
+    font-size: 16px;
+    font-weight: 600;
+    color: $orange;
+    text-transform: uppercase;
+  }
+
+  &__email{
+    margin-bottom: 12px;
+  }
+
+  &__tel{
+    margin-bottom: 12px;
+  }
+
+
+}
+
+.overlay {
+  background-color: $text;
+  opacity: 0.5;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+
+  &.active{
+    display: block;
+  }
+}

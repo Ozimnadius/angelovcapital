@@ -26,7 +26,7 @@ html(lang="ru")
             header.header
                 .header__wrap
                     //- btn
-                    button(type='button').header__mmenu-btn
+                    button(type='button').header__mmenu-btn.jsMenuOpen
                         <svg width="40" height="21" viewBox="0 0 40 21" xmlns="http://www.w3.org/2000/svg">
                         <rect y="0.391113" width="40" height="4"/>
                         <rect y="8.39111" width="28" height="4"/>
@@ -135,6 +135,44 @@ html(lang="ru")
                     div
                     div
 
+
+
+        .overlay
+        .mmenu
+            .mmenu__top
+                .mmenu__left
+                    button.mmenu__btn.jsMenuClose(type='button')
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM22 7L1 7V9L22 9V7Z" fill="black"/>
+                        </svg>
+                        span Меню
+                .mmenu__right
+                    a(href='#').mmenu__enter
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.3334 24.5V22.1667C23.3334 20.929 22.8417 19.742 21.9666 18.8668C21.0914 17.9917 19.9044 17.5 18.6667 17.5H9.33341C8.09574 17.5 6.90875 17.9917 6.03358 18.8668C5.15841 19.742 4.66675 20.929 4.66675 22.1667V24.5" stroke="#FD724C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.9999 12.8333C16.5772 12.8333 18.6666 10.744 18.6666 8.16667C18.6666 5.58934 16.5772 3.5 13.9999 3.5C11.4226 3.5 9.33325 5.58934 9.33325 8.16667C9.33325 10.744 11.4226 12.8333 13.9999 12.8333Z" stroke="#FD724C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        span Войти
+            .mmenu__center
+                .mmenu__nav
+                    each i in menuFooter
+                        .mmenu__item
+                            a.mmenu__link(href=i.href)
+                                span.mmenu__link-name= i.title
+            .mmenu__bottom
+                .mmenu__addr
+                    |Москва,
+                    br
+                    |Краснопресненская
+                    br
+                    |наб., 12-17.
+                a(href='mailto:i.angelov@calorium.co.uk').mmenu__email i.angelov@calorium.co.uk
+                a(href='tel:8(937)2325537').mmenu__tel 8 (937) 232 55 37
+                a(href='#').mmenu__tg
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="26" cy="26" r="26" fill="#2EB398"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.3255 35.2408C31.5789 35.7891 32.0489 34.6402 32.0489 34.6402L35.3651 17.9808C35.339 16.858 33.8245 17.5369 33.8245 17.5369L15.2589 24.8221C15.2589 24.8221 14.3711 25.1355 14.4495 25.6838C14.5278 26.2322 15.2328 26.4933 15.2328 26.4933L19.9069 28.06C19.9069 28.06 21.3169 32.6818 21.6041 33.5696C21.8653 34.4313 22.1003 34.4574 22.1003 34.4574C22.3614 34.5619 22.5964 34.3791 22.5964 34.3791L25.6254 31.6373L30.3255 35.2408ZM31.1348 20.9314C31.1348 20.9314 31.7876 20.5397 31.7614 20.9314C31.7614 20.9314 31.8659 20.9836 31.5264 21.3492C31.2131 21.6625 23.8234 28.2949 22.8312 29.1827C22.7528 29.235 22.7006 29.3133 22.7006 29.4177L22.4134 31.8723C22.3612 32.1334 22.0217 32.1595 21.9434 31.9245L20.7161 27.9032C20.6639 27.7466 20.7161 27.5638 20.8728 27.4593L31.1348 20.9314Z" fill="white"/>
+                    </svg>
 
 
         script(src='js/vendor.min.js')

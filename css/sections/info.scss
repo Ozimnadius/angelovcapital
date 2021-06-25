@@ -101,6 +101,9 @@
 
     img {
       display: block;
+      @include sm-block{
+        width: 100%;
+      }
     }
   }
 

@@ -379,6 +379,10 @@ h6 {
   }
 }
 
+.ovh {
+  overflow: hidden;
+}
+
 .header {
   position: absolute;
   z-index: 10;
@@ -1460,7 +1464,7 @@ h6 {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 60px 40px;
   -ms-grid-rows: auto 60px auto;
-      grid-template-areas: "tag tag tag title title title title title title title title " ". . . content content content content content content content content .";
+      grid-template-areas: "tag tag tag title title title title title title title title ." ". . . content content content content content content content content .";
 }
 @media screen and (max-width: 1199.98px) {
   .philosophy__grid {
@@ -1832,6 +1836,11 @@ h6 {
 .info__img img {
   display: block;
 }
+@media screen and (max-width: 767.98px) {
+  .info__img img {
+    width: 100%;
+  }
+}
 .info__content {
   font-size: 18px;
 }
@@ -1961,6 +1970,152 @@ h6 {
   .ibanner__right img {
     width: 100%;
   }
+}
+
+.mmenu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 375px;
+  left: 0;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  background-color: #ffffff;
+  overflow-y: auto;
+  padding: 25px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767.98px) {
+  .mmenu {
+    width: 100%;
+  }
+}
+.mmenu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.mmenu__top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 45px;
+}
+.mmenu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.mmenu__btn svg {
+  margin-right: 10px;
+}
+.mmenu__enter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fd724c;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.mmenu__enter svg {
+  margin-right: 10px;
+}
+.mmenu__center {
+  margin-bottom: 50px;
+}
+.mmenu__nav {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: -11px 0;
+}
+.mmenu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mmenu__link-name {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 11px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mmenu__link-btn {
+  width: 40px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mmenu__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mmenu__addr {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.mmenu__email, .mmenu__tel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fd724c;
+  text-transform: uppercase;
+}
+.mmenu__email {
+  margin-bottom: 12px;
+}
+.mmenu__tel {
+  margin-bottom: 12px;
+}
+
+.overlay {
+  background-color: #121416;
+  opacity: 0.5;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.overlay.active {
+  display: block;
 }
 
 .footer {
