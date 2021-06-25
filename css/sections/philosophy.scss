@@ -1,0 +1,58 @@
+.philosophy {
+  background: $footer url("../images/content/index/philosophy/bg.svg") center top no-repeat;
+  color: $bg;
+  padding-top: 155px;
+  padding-bottom: 210px;
+  @include lg-block {
+    padding-bottom: 130px;
+  }
+  @include sm-block {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 60px 40px;
+    grid-template-areas: 'tag tag tag title title title title title title title title '
+                        '. . . content content content content content content content content .';
+    @include lg-block {
+      grid-template-areas: 'tag tag tag tag tag tag tag tag tag tag tag tag'
+              '. . . title title title title title title title title title'
+                        '. . . content content content content content content content content content';
+      grid-gap: 40px 10px;
+    }
+    @include sm-block {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'tag' 'title' 'content';
+      grid-gap: 30px;
+    }
+  }
+
+  &__tag {
+    grid-area: tag;
+    padding-top: 10px;
+  }
+
+  &__title {
+    grid-area: title;
+    @include lg-block {
+      padding-bottom: 30px;
+    }
+
+    h3{
+      @include sm-block{
+        font-family: Montserrat;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__content {
+    grid-area: content;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,216 @@
+.about{
+  padding-top: 170px;
+  padding-bottom: 140px;
+  @include lg-block{
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+  @include sm-block{
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  &__grid{
+    background: url("/images/content/index/about/bg.png") right bottom no-repeat;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 'tag tag title title title title title title title title title title'
+                        'img img img img img content content content content content content content'
+                        'img img img img img nums nums nums nums nums nums nums';
+    grid-gap: 40px;
+
+    @include lg-block{
+      grid-template-areas: 'tag tag tag title title title title title title title title title'
+                        'img img img img img img content content content content content content'
+                        'img img img img img img nums nums nums nums nums nums';
+      grid-gap: 40px 10px;
+    }
+    @include sm-block{
+      grid-template-columns: 1fr;
+      grid-template-areas: 'tag' 'title' 'img' 'content' 'nums';
+      grid-gap: 30px;
+    }
+  }
+
+  &__tag{
+    grid-area: tag;
+    h5{
+      line-height: 40px;
+    }
+  }
+
+  &__title{
+    grid-area: title;
+
+    h2{
+      line-height: 125%;
+    }
+  }
+
+  &__img{
+    grid-area: img;
+  }
+
+  &__content{
+    grid-area: content;
+    font-size: 18px;
+  }
+
+  &__nums{
+    align-self: flex-end;
+    grid-area: nums;
+  }
+}
+
+.acard{
+
+  background-color: $dark-blue;
+  color: $bg;
+
+  &__img{
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: calc(400/461*100%);
+    }
+
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__decor{
+    &-1,&-2,&-3,&-4{
+      position: absolute;
+    }
+
+    &-1 {
+      width: 43px;
+      height: 43px;
+      background-color: $main;
+      top: 34px;
+      left: 32px;
+      @include lg-block{
+        width: 35px;
+        height: 35px;
+        top: 25px;
+        left: 25px;
+      }
+
+
+      &:before{
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-color: $main;
+        position: absolute;
+        bottom: 100%;
+        right: 100%;
+        @include lg-block{
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    &-2{
+      bottom: -33px;
+      right: 34px;
+      width: 65px;
+      height: 65px;
+      background-color: $main;
+      @include lg-block{
+        width: 50px;
+        height: 50px;
+        bottom: -25px;
+        right: 25px;
+      }
+    }
+
+    &-3{
+      top: 168px;
+      left: 73px;
+      @include lg-block{
+        top: 130px;
+        left: 55px;
+      }
+    }
+
+    &-4{
+      right: 30px;
+      bottom: 25px;
+      @include lg-block{
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  }
+
+  &__bottom{
+    position: relative;
+    padding: 20px 40px 40px 40px;
+    @include lg-block{
+      padding: 30px 20px 50px 20px;
+    }
+  }
+
+  &__title{
+    margin-bottom: 10px;
+    @include lg-block{
+      font-size: 26px;
+    }
+  }
+
+  &__role{
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+
+}
+
+.anums{
+
+  &__top{
+    margin-bottom: 10px;
+  }
+
+  &__bottom{
+    display: flex;
+    align-items: flex-end;
+    @include lg-block{
+        flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__desc{
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 140%;
+  }
+
+  &__val{
+    color: $orange;
+    font-family: Merriweather;
+    font-size: 164px;
+    font-weight: 400;
+    line-height: 1;
+    margin-right: 30px;
+    @include lg-block{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

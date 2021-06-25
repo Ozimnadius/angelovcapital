@@ -1,0 +1,41 @@
+//variables
+//fonts
+$font: 'Montserrat', Arial, sans-serif;
+
+//colors
+$text: #121416;
+$footer: #0b1529;
+$dark-blue: #172541;
+$orange: #fd724c;
+$main: #2eb398;
+$bg: #ffffff;
+$white: #f4f7fb;
+
+//another
+$font-size: 16px;
+$transition: 0.3s;
+
+//layout
+@import "layout/mixins";
+@import "layout/fonts";
+@import "layout/smart-grid";
+@import "layout/adjustment";
+@import "layout/common";
+
+//sections
+@import "sections/header";
+@import "sections/index";
+@import "sections/banner";
+@import "sections/about";
+@import "sections/system";
+@import "sections/how";
+@import "sections/philosophy";
+@import "sections/info";
+@import "sections/footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}

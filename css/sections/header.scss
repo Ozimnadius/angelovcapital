@@ -1,0 +1,100 @@
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__wrap{
+    padding: 0 140px;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+
+    @include xlg-block{
+      @include wrapper;
+    };
+    @include lg-block{
+        align-items: flex-start;
+    }
+    @include sm-block{
+      padding-top: 15px;
+    }
+  }
+
+  &__mmenu-btn{
+
+    fill: $bg;
+    display: none;
+    @include lg-block{
+      display: block;
+      margin-top: 20px;
+      margin-right: 35px;
+    }
+    @include sm-block{
+      margin: 0;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+    }
+  }
+
+  &__logo{
+    flex-shrink: 0;
+    @include lg-block{
+      margin-right: auto;
+    }
+    @include sm-block{
+      margin-left: auto;
+    }
+  }
+
+  &__nav{
+    flex-grow: 1;
+    margin: 0 60px;
+    @include xlg-block{
+      margin: 0 20px;
+    };
+    @include lg-block{
+      display: none;
+    }
+  }
+
+  &__enter{
+    @include sm-block{
+      display: none;
+    }
+  }
+
+}
+
+.enter{
+  width: 211px;
+  height: 58px;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+
+  &__item{
+    padding: 2px 0;
+    flex-grow: 1;
+    color: $bg;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-right: 1px solid $bg;
+    text-align: center;
+    @include tr;
+
+    &:hover{
+      color: $orange;
+    }
+
+    &:last-child{
+      border-right: none;
+    }
+  }
+}
+

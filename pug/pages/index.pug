@@ -1,0 +1,195 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.index
+        //- banner
+        section.index__banner
+            .banner
+                .banner__img
+                    img(src="images/content/index/banner/img.jpg")
+                .banner__wrap
+                    .banner__content
+                        .banner__top
+                            .banner__title Инвестируйте с нами
+                        .banner__bottom
+                            .banner__sub
+                                | Начните зарабатывать
+                                br
+                                | с Angelov Capital
+                            button(type='button').btn.banner__btn СОЗДАТЬ АККАУНТ
+
+                    .banner__info
+                        a(href='#').banner__tg
+                            <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="36" cy="36" r="36"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M41.989 48.7947C43.7244 49.5539 44.3752 47.9631 44.3752 47.9631L48.9669 24.8963C48.9307 23.3416 46.8337 24.2816 46.8337 24.2816L21.1276 34.3689C21.1276 34.3689 19.8983 34.8027 20.0068 35.562C20.1152 36.3212 21.0914 36.6828 21.0914 36.6828L27.5632 38.8521C27.5632 38.8521 29.5155 45.2515 29.9132 46.4808C30.2748 47.6739 30.6002 47.71 30.6002 47.71C30.9617 47.8547 31.2871 47.6016 31.2871 47.6016L35.4811 43.8053L41.989 48.7947ZM43.1098 28.9817C43.1098 28.9817 44.0137 28.4394 43.9775 28.9817C43.9775 28.9817 44.1221 29.054 43.6521 29.5602C43.2183 29.9941 32.9864 39.1774 31.6125 40.4067C31.5041 40.479 31.4317 40.5875 31.4317 40.7321L31.034 44.1306C30.9617 44.4922 30.4917 44.5284 30.3832 44.203L28.684 38.6351C28.6117 38.4182 28.684 38.1651 28.9009 38.0205L43.1098 28.9817Z" fill="white"/>
+                            </svg>
+                        a(href='mailto:i.angelov@calorium.co.uk').banner__link i.angelov@calorium.co.uk
+        //- about
+        section.index__about#about
+            .about
+                .container
+                    .about__grid
+                        .about__tag
+                            h5 О фонде
+                        .about__title
+                            h2  AngelovCapital – первый в России пиринговый инвестиционный фонд
+                        .about__img
+                            .acard
+                                .acard__img
+                                    img(src='images/content/index/about/img.jpg')
+                                    .acard__decor-1
+                                    .acard__decor-2
+                                    .acard__decor-3.cross
+                                .acard__bottom
+                                    h3.acard__title Илья Ангелов
+                                    .acard__role Основатель фонда
+                                    .acard__txt Профессиональный инвестор и специалист в области нейронных сетей и искусственного интеллекта
+                                    .acard__decor-4.cross
+                        .about__content
+                            .content
+                                p AngelovCapital объединяет несвязанные между собой брокерские счета участников в единое целое. Все сделки фонда автоматизированы.
+                                p Покупка и продажа акций осуществляется одновременно для всех инвесторов. Наш торговый робот использует специальные алгоритмы проведения сделок. Это исключает существенные скачки цен из-за объемов (количества сделок).
+                                p(align="right") Фонд основан в 2021 году.
+                        .about__nums
+                            .anums
+                                .anums__top
+                                    .anums__desc В нашем фонде уже
+                                .anums__bottom
+                                    .anums__val 698
+                                    .anums__desc
+                                        | аккаунтов
+                                        | трейдеров
+        //- system
+        section.index__system#system
+            .system
+                .container
+                    .system__top
+                        .system__row
+                            .system__left
+                                h5 о торговой системе
+                            .system__right
+                                h3.system__title Профессиональные трейдеры уверены: боты торгуют лучше людей
+                                .system__content.content
+                                    p Вы до сих пор торгуете вручную и углубляетесь в анализ, но все равно пропускаете удачные моменты для покупки и продажи акций?
+                                    p Профессиональные трейдеры уверены: боты торгуют лучше людей. Мы создали уникального робота, который делает автоматическую торговлю доступной для всех.
+                    .system__grid
+                        .system__card.system__card--1
+                            .scard
+                                .scard__num 01
+                                h4.scard__title Робот работает в связке с аналитиками AngelovCapital.
+                                .scard__txt Профессионалы отбирают перспективные акции с хорошим потенциалом роста и дают роботу команду на покупку.
+                                .scard__decor.scard__decor--1
+                                    .cross
+                        .system__card.system__card--2
+                            .scard
+                                .scard__num 02
+                                h4.scard__title Нейронная сеть
+                                .scard__txt Нейронная сеть анализирует предложенную аналитиками акцию и выносит окончательное решение о целесообразности инвестиций.
+                                .scard__decor.scard__decor--2
+                                    .cross
+                        .system__card.system__card--3
+                            .scard
+                                .scard__num 03
+                                h4.scard__title Покупка и продажа
+                                .scard__txt Если мнение нейросети и аналитиков совпадает, торговый робот начинает покупать акции для участников фонда. Схожим образом происходит и продажа активов.
+                                .scard__decor.scard__decor--3
+                                .scard__cross
+                                    .cross
+                        .system__img.system__img--1
+                            img(src='images/content/index/system/1.jpg')
+                        .system__img.system__img--2
+                            img(src='images/content/index/system/2.jpg')
+                        .system__img.system__img--3
+                            img(src='images/content/index/system/3.jpg')
+                    .system__bottom
+                        .swarning
+                            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42.594 26H47.13L46.32 52.46H43.35L42.594 26ZM44.862 64.07C44.07 64.07 43.386 63.8 42.81 63.26C42.27 62.684 42 62.018 42 61.262C42 60.47 42.27 59.822 42.81 59.318C43.35 58.778 44.034 58.508 44.862 58.508C45.654 58.508 46.32 58.778 46.86 59.318C47.4 59.822 47.67 60.47 47.67 61.262C47.67 62.018 47.4 62.684 46.86 63.26C46.32 63.8 45.654 64.07 44.862 64.07Z" fill="#074DBE"/>
+                            <circle cx="45" cy="45" r="43" stroke="#074DBE" stroke-width="4"/>
+                            </svg>
+                            span Торговый робот следует четким алгоритмам, правилам и всегда контролирует риски. Никакой бессистемной торговли. 
+        //- how
+        section.index__how#how
+            .how
+                .container
+                    h5.how__tag Начать легко
+                    h2.how__title Как начать зарабатывать с AngelovCapital
+                    .how__sub В самостоятельной торговле на рынке слишком много переменных и сложностей.
+                    .how__grid
+                        .how__item
+                            .how__icon
+                                img(src='images/content/index/how/1.svg')
+                            .how__txt
+                                |Чтобы начать зарабатывать вместе с нами и всегда быть на шаг впереди, достаточно иметь брокерский счет.
+                        .how__item
+                            .how__icon
+                                img(src='images/content/index/how/2.svg')
+                            .how__txt
+                                | AngelovCapital работает с брокерами
+                                br
+                                span.how__txt--green Тинькофф.Инвестиции и Freedom Finance. 
+                        .how__item
+                            .how__icon
+                                img(src='images/content/index/how/3.svg')
+                            .how__txt
+                                |Все, что вам останется, – пройти быструю регистрацию в системе и добавить брокерский счет в наш фонд.
+                    .how__bottom
+                        .how__content
+                            p Вы можете начать с небольших вложений, например, от $700. Но не забывайте, что маленькие суммы могут быть недостатком: вы сможете торговать только небольшими объемами. Мы рекомендуем иметь на счету как минимум $1 000.
+                        button(type='button').how__btn.btn.btn--orange СОЗДАТЬ АКАУНТ
+        //- philosophy
+        section.index__philosophy#philosophy
+            .philosophy
+                .container
+                    .philosophy__grid
+                        .philosophy__tag
+                            h5
+                                |Наша Философия
+                                br
+                                |инвестирования
+                        .philosophy__title
+                            h3 Мы инвестируем в перспективные компании
+                        .philosophy__content
+                            .content
+                                p Фонд AngelovCapital инвестирует в акции недооцененных компаний. Это бумаги, которые фундаментально недооценены и стоят ниже своей справедливой стоимости. Мы стараемся выявить их до того, как другие участники рынка увидят хороший потенциал роста.
+                                p Наш фонд старается избегать компаний с мультипликаторами, оторванными от реальности. Мы не рискуем: в AngelovCapital нет места хайповым историям.
+        //- info
+        section.index__info#info
+            .info
+                .container
+                    .info__container
+                        .info__wrap
+                            .info__tag
+                                h5 Преимущества
+                            h2.info__title AngelovCapital подойдет всем, кто хочет извлекать прибыль из рыночных тенденций, не прибегая при этом к сложным методам.
+                            .info__items
+                                each i in infoItems
+                                    .info__item.iitem
+                                        .iitem__icon
+                                            img(src=i.src)
+                                        .iitem__content= i.txt
+                            .info__row
+                                .info__img
+                                    img(src='images/content/index/info/img.jpg')
+                                .info__content
+                                    .content
+                                        p Все мы знаем о традиционных инвестиционных фондах. Но лишь единицы из них показывают высокую доходность. Чаще всего инвесторы получают скромные 10-15% годовых, а в период кризиса вложения и вовсе могут обернуться убытками. Не стоит забывать и комиссиях, которые уничтожают «львиную долю» прибыли и снижают отдачу от инвестиций.
+                                        p Еще одна причина не инвестировать в традиционные фонды – обязательная передача капитала. Вы не сможете забрать средства в удобный момент. Гарантий не даст никто. История знает немало примеров, когда традиционные фонды рушились как «карточный домик», деньги инвесторов исчезали, а клиенты навсегда разочаровывались в фондовом рынке.
+                                        p Эта печальная история – не об AngelovCapital. Мы не имеем доступа к вашим средствам. Наш робот только автоматически открывает и закрывает позиции. Вы можете отключить его в любое время.
+
+
+                            .info__banner
+                                .ibanner
+                                    .ibanner__left
+                                        .ibanner__title Начните зарабатывать прямо сейчас
+                                        .ibanner__sub
+                                            | Уже есть аккаунт?&nbsp;
+                                            a(href='#').link Войти
+                                        button(type='button').ibanner__btn.btn.btn--solid СОЗДАТЬ АККАУНТ
+                                    .ibanner__right
+                                        img(src='images/content/index/info/banner.jpg')
+

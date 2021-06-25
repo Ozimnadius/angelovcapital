@@ -1,0 +1,102 @@
+.how {
+  background: $footer url("../images/content/index/how/bg.jpg") center 0 no-repeat;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 140px;
+  color: $bg;
+  @include lg-block {
+    padding-top: 70px;
+  }
+  @include sm-block {
+    background: $footer;
+    padding-bottom: 100px;
+  }
+
+  &__tag {
+    margin-bottom: 43px;
+    @include sm-block {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    max-width: 860px;
+    font-size: 64px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    @include sm-block {
+      font-size: 37px;
+    }
+  }
+
+  &__sub {
+    max-width: 660px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    @include lg-block {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 50px;
+    @include lg-block {
+      grid-gap: 10px;
+    }
+    @include sm-block {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 25px;
+    @include lg-block {
+      display: flex;
+      justify-content: center;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__txt {
+    font-size: 18px;
+
+    &--green {
+      color: $main;
+      font-weight: 700;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'content content btn';
+    grid-gap: 40px;
+    align-items: center;
+    @include lg-block {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'content' 'btn';
+    }
+  }
+
+  &__content {
+    grid-area: content;
+    font-size: 18px;
+  }
+
+  &__btn {
+    grid-area: btn;
+    height: 55px;
+    max-width: 283px;
+  }
+}

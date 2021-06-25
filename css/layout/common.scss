@@ -1,0 +1,98 @@
+.btn {
+  border: 1px solid $bg;
+  color: $bg;
+  fill: $bg;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include tr;
+
+  &:hover {
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  svg{
+    margin-right: 15px;
+  }
+
+  &--orange {
+    color: $orange;
+    border-color: $orange;
+
+    &:hover{
+      color: $bg;
+    }
+  }
+
+  &--solid {
+    background-color: $orange;
+    border-color: $orange;
+
+    &:hover {
+      background-color: $main;
+      border-color: $main;
+    }
+  }
+
+}
+
+.link {
+  color: $main;
+  font-size: 20px;
+  font-weight: 600;
+  @include tr;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.tag{
+
+}
+
+.cross{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  @include lg-block{
+    width: 24px;
+    height: 24px;
+  }
+
+  &:before,&:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: $bg;
+  }
+
+  &:before{
+    top: 0;
+    left: 50%;
+    margin-left: -1.5px;
+    width: 3px;
+    height: 100%;
+    @include lg-block{
+      width: 2px;
+      margin-left: -1px;
+    }
+  }
+
+  &:after{
+    top: 50%;
+    margin-top: -1.5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    @include lg-block{
+      margin-top: -1px;
+      height: 2px;
+    }
+  }
+}

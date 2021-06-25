@@ -1,0 +1,104 @@
+//variables
+$vh: 1080;
+
+@function rem($size) {
+  $remSize: $size / $font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin fz($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@function lh($size1, $size2) {
+  $lh: $size2 / $size1;
+  @return $lh;
+}
+
+@function vh($size) {
+  @return $size/$vh *100*1vh;
+}
+
+@mixin content() {
+  ul {
+    margin: 1em 0;
+    padding-left: 40px;
+    li {
+      list-style: disc;
+    }
+  }
+
+  h1 {
+    margin: 0.67em 0;
+  }
+  h2 {
+    margin: 0.83em 0;
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  h4 {
+    margin: 1.33em 0;
+  }
+  h5 {
+    margin: 1.67em 0;
+  }
+  h5 {
+    margin: 2.33em 0;
+  }
+  p {
+    margin: 20px 0;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+
+    }
+  }
+}
+
+@mixin  headers() {
+
+  h1 {
+    font-family: Merriweather;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 125%;
+  }
+  h2 {
+    font-family: Merriweather;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 125%;
+    @include sm-block{
+      font-size: 27px;
+    }
+  }
+  h3 {
+    font-family: Merriweather;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 125%;
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 125%;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 125%;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 125%;
+  }
+}
+
+@mixin tr(){
+  transition: $transition;
+}

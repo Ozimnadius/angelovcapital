@@ -1,0 +1,267 @@
+.footer {
+  background-color: $footer;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  color: $bg;
+  @include lg-block {
+    padding-top: 50px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    @include sm-block {
+      flex-direction: column;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__company {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    @include sm-block {
+      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__logo {
+    margin-right: 70px;
+    flex-shrink: 0;
+    @include lg-block {
+      margin-right: 30px;
+    }
+    @include sm-block{
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tagline {
+    max-width: 506px;
+    font-size: 18px;
+    @include sm-block{
+      text-align: center;
+    }
+  }
+
+  &__tg {
+    fill: $bg;
+    display: flex;
+    align-items: center;
+    opacity: .5;
+    white-space: nowrap;
+    @include tr;
+    @include lg-block {
+      margin-top: -35px;
+    }
+    @include sm-block {
+      margin-top: 0;
+    }
+
+    &:hover {
+      color: $orange;
+      fill: $orange;
+      opacity: 1;
+    }
+
+    svg {
+      margin-right: 20px;
+    }
+  }
+
+  &__middle {
+    margin-bottom: 110px;
+    @include md-block {
+      margin-bottom: 50px;
+    }
+    @include sm-block{
+      padding: 0 25px;
+    }
+  }
+
+  &__menu {
+    @include col;
+    @include size(10);
+    @include size-lg(10);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -18px;
+    margin-bottom: -18px;
+    @include size-md(12);
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 100px;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 18px 0;
+    @include tr;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__contacts {
+    @include col;
+    @include size(14);
+    @include size-lg(14);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include size-md(12);
+    @include size-sm(24);
+  }
+
+  &__heading {
+    margin-bottom: 38px;
+    @include sm-block{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__addr {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    color: $orange;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include tr;
+
+    &:hover {
+      color: $main;
+    }
+  }
+
+  &__mail {
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    align-items: flex-end;
+    @include md-block {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__left, &__center, &__right {
+    @include col;
+  }
+
+  &__left {
+    @include size(10);
+    @include size-lg(10);
+    @include size-md(16);
+    @include size-sm(24);
+  }
+
+  &__center {
+    @include size(8);
+    @include size-lg(8);
+    @include shift-md-left(12);
+    @include size-md(12);
+    @include md-block {
+      order: -1;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 35px;
+    }
+    @include shift-sm-left(0);
+    @include size-sm(24);
+    padding: 0 25px;
+  }
+
+  &__right {
+    @include size(6);
+    display: flex;
+    justify-content: flex-end;
+    @include size-lg(6);
+    @include size-md(8);
+    @include size-sm(24);
+    @include sm-block{
+        justify-content: flex-start;
+      margin-top: 20px;
+    }
+  }
+
+  &__policy {
+    margin-bottom: 20px;
+    @include sm-block{
+      font-size: 14px;
+    }
+  }
+
+  &__copy{
+    @include sm-block{
+      font-size: 14px;
+    }
+  }
+
+  &__vendor {
+    display: flex;
+    align-items: center;
+    @include tr;
+
+    svg {
+      display: block;
+      margin-left: 6px;
+
+      path {
+        @include tr;
+      }
+
+    }
+
+    &:hover {
+      color: $orange;
+
+      svg {
+        path {
+          fill: $orange
+        }
+      }
+    }
+  }
+
+}
+
+.partners {
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 -25px;
+  }
+
+  &__item {
+    margin: 0 25px;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
