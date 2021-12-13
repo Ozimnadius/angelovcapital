@@ -1,0 +1,43 @@
+extends main
+
+block variables
+    - var title = 'Телеграм бот'
+
+block content
+    .cabinet
+        .cabinet__container
+            .cabinet__aside
+                include blocks/aside
+            main.cabinet__main
+                .cabinet__top
+                    .cabinet__top-left
+                        h2.cabinet__title Телеграм бот
+                    .cabinet__top-right
+                .cabinet__bottom
+                    .tg
+                        .tg__list
+                            .tg__item
+                                p
+                                    b Телеграм бот AngelovCapitalBot
+                                p
+                                    |После авторизации, бот будет отправлять сообщения о
+                                    br
+                                    |новых сделках и ошибках
+                            .tg__item
+                                p
+                                    b Токен для авторизации
+                                p Чтобы подключиться к боту, перейдите по ссылке
+                                p
+                                    a(href="#") https://t.me/AngelovCapitalBot
+                                p Отправьте боту токен авторизации
+                                blockquote.tg__data d3e00cdb90a92a3fdace9f1706d69bc67af83d3a86cf4ef29477
+                        button(type='button').tg__btn.tg__copy Скопировать
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+.cabinet {
+  min-height: 100vh;
+  background: #1E2B44;
+  padding-top: 30px;
+  padding-bottom: 100px;
+
+  &__container {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 10px;
+    @media (max-width: 1199.98px) {
+      grid-template-columns: 100%;
+      grid-gap: 40px;
+    }
+    @media (max-width: 767.98px) {
+      padding: 0 10px;
+    }
+  }
+
+  &__main {
+    padding-top: 85px;
+    @media (max-width: 1199.98px) {
+      padding-top: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba($bg, .1);
+    margin-bottom: 30px;
+    gap: 20px;
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    color: $bg;
+    font-size: 24px;
+    font-weight: 400;
+    @media (max-width: 767.98px){
+      font-size: 22px;
+    }
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    color: $orange;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 20px;
+    @media (max-width: 767.98px) {
+      text-align: right;
+    }
+  }
+
+  &__search {
+    width: 300px;
+    height: 44px;
+    border-radius: 3px;
+    border: 1px solid $bg;
+    padding: 5px 20px;
+    background: url("/images/search.svg") right 15px center no-repeat;
+    background-size: 15px 15px;
+    color: $bg;
+    @media (max-width: 767.98px){
+      width: 345px;
+    }
+  }
+
+  &__table {
+    @media (max-width: 767.98px) {
+      margin-right: -10px;
+      overflow-x: auto;
+
+    }
+  }
+
+  &__chart {
+    padding-left: 90px;
+    @media (max-width: 767.98px){
+      padding-left: 0;
+    }
+  }
+
+
+}

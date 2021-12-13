@@ -1,0 +1,41 @@
+extends main
+
+block variables
+    - var title = 'Заявка в поддержку #340'
+
+block content
+    .cabinet
+        .cabinet__container
+            .cabinet__aside
+                include blocks/aside
+            main.cabinet__main
+                .cabinet__top
+                    .cabinet__top-left
+                        h2.cabinet__title Заявка в поддержку #340
+                    .cabinet__top-right
+                .cabinet__bottom
+                    form.request
+                        .request__date
+                            |12:17
+                            br
+                            |10.06
+                        .request__name.
+                            <b>Николай Иванович</b> (123@mail.ru)
+                        .request__txt Главное отличие форвардного и фьючерсного контрактов состоит в том, что форвардный контракт представляет собой разовую внебиржевую сделку между продавцом и покупателем, а фьючерсный контракт — повторяющееся предложение, которым торгуют на бирже
+                        .request__img
+                            img(src="/images/content/request/img.png" alt="lorem")
+                        textarea(name="msg").request__msg
+                        .request__btns
+                            button(type='submit').request__submit Отправить
+                            button(type='button').request__add
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.80922 16.8956L18.0235 7.92839C19.4803 6.51058 19.2836 4.01962 17.5903 2.37181C15.8972 0.724114 13.3376 0.532469 11.8806 1.95028L1.72135 11.8372C0.658086 12.8719 0.776177 14.7494 2.03639 15.9758C3.29661 17.2022 5.1866 17.3554 6.28912 16.2824L7.07662 15.5161C8.25797 14.3664 9.63601 13.0253 9.63601 13.0253L16.1332 6.70191C16.8419 6.01224 16.7238 4.82405 15.9363 4.01946C15.1093 3.2146 13.8886 3.13815 13.1799 3.8278L6.64373 10.1125L4.28099 12.4119" stroke="#FD724C" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                span Прикрепить
+
+
+
+
+
+
+

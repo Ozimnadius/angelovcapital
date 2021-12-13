@@ -1,0 +1,46 @@
+extends main
+
+block variables
+    - var title = 'Поддержка'
+
+block content
+    .cabinet
+        .cabinet__container
+            .cabinet__aside
+                include blocks/aside
+            main.cabinet__main
+                .cabinet__top
+                    .cabinet__top-left
+                        h2.cabinet__title Поддержка
+                    .cabinet__top-right
+                        button(type='button').cabinet__add
+                            span Создать запрос
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="3" fill="#FD724C"/>
+                            <path d="M19.859 31.7241C19.313 31.7241 18.8702 31.2813 18.8702 30.7353V20.8481H8.98292C8.43693 20.8481 7.99414 20.4055 7.99414 19.8593C7.99414 19.3133 8.43668 18.8705 8.98292 18.8705H18.8702V8.98328C18.8702 8.43728 19.3129 7.99449 19.859 7.99449C20.405 7.99449 20.8477 8.43727 20.8477 8.98328V18.8705H30.735C31.281 18.8705 31.7238 19.3133 31.7238 19.8593C31.7238 20.4053 31.2812 20.8481 30.735 20.8481H20.8477V30.7353C20.8477 31.2813 20.4052 31.7241 19.859 31.7241Z" fill="white"/>
+                            </svg>
+                .cabinet__bottom
+                    .cabinet__table
+                        table.table
+                            thead
+                                tr
+                                    th Тема
+                                    th Статус
+                                    th Дата
+
+                            tbody
+                                tr
+                                    td
+                                        a(href="/cabinet/request.html") Текст
+                                    td(style="color:#0FBF16;")
+                                        a(href="/cabinet/request.html") Открыт
+                                    td
+                                        a(href="/cabinet/request.html") 12:17 10.06
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+.settings{
+  border-radius: 3px;
+  background-color: $bg;
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  grid-gap: 30px;
+  @media (max-width: 1199.98px){
+     grid-template-columns: 1fr;
+  }
+
+  &__fields{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+    @media (max-width: 1199.98px){
+      grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+  }
+
+  &__submit{
+    width: 100%;
+    height: 57px;
+    border-radius: 3px;
+    background-color: $orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $bg;
+    font-weight: 700;
+  }
+
+  &__field{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__btn{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    span {
+      opacity: 0;
+      @media (max-width: 1199.98px){
+        display: none;
+      }
+    }
+  }
+
+  &__input{
+    width: 100%;
+    height: 57px;
+    border-radius: 3px;
+    background-color: #eeeeee;
+    padding: 10px;
+  }
+
+
+}

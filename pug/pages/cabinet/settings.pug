@@ -1,0 +1,39 @@
+extends main
+
+block variables
+    - var title = 'Настройки'
+
+block content
+    .cabinet
+        .cabinet__container
+            .cabinet__aside
+                include blocks/aside
+            main.cabinet__main
+                .cabinet__top
+                    .cabinet__top-left
+                        h2.cabinet__title Настройки
+                    .cabinet__top-right
+                .cabinet__bottom
+                    form.settings
+                        .settings__fields
+                            label.settings__field
+                                span.settings__name Новый пароль
+                                input(type="text" name="password" autocomplete="new-password").settings__input
+                            label.settings__field
+                                span.settings__name Повторите пароль
+                                input(type="password" name="passwordnewPasswordRepeat" autocomplete="new-password").settings__input
+                        .settings__btn
+                            span Кнопка
+                            button(type='submit').settings__submit Изменить пароль
+
+
+
+
+
+
+
+
+
+
+
+

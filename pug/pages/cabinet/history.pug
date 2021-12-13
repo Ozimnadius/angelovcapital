@@ -1,0 +1,59 @@
+extends main
+
+block variables
+    - var title = 'История сделок'
+
+block content
+    .cabinet
+        .cabinet__container
+            .cabinet__aside
+                include blocks/aside
+            main.cabinet__main
+                .cabinet__top
+                    .cabinet__top-left
+                        h2.cabinet__title История сделок
+                    .cabinet__top-right
+                        input(type="search" name="history" placeholder="Поиск").cabinet__search
+                .cabinet__bottom
+                    .cabinet__table
+                        table.table
+                            thead
+                                tr
+                                    th
+                                    th Инструмент
+                                    th Статус
+                                    th Тип сделки
+                                    th Тип
+                                    th Количество
+                                    th Цена
+                                    th Сумма
+                                    th Дата
+                            tbody
+                                tr
+                                    td
+                                        img(src="/images/content/accounts/1.png" alt="lorem")
+                                    td VIPS
+                                    td(style="color: #ED3333;") Закрыт вручную
+                                    td М
+                                    td Sell
+                                    td 2
+                                    td 21.385
+                                    td 42.77
+                                    td 16:23 09.06
+                                tr
+                                    td
+                                        img(src="/images/content/accounts/2.png" alt="lorem")
+                                    td VIPS
+                                    td(style="color:#0FBF16;") Исполнена
+                                    td М
+                                    td Sell
+                                    td 2
+                                    td 21.385
+                                    td 42.77
+                                    td 16:23 09.06
+
+
+
+
+
+

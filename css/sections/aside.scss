@@ -1,0 +1,47 @@
+.aside{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__logo{
+    @media (max-width: 1199.98px){
+      align-self: center;
+    }
+  }
+
+  &__menu{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &__item{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: rgba($bg,.05);
+    color: #858a94;
+    position: relative;
+
+    &:hover{
+      color: $orange;
+    }
+
+
+    svg{
+      display: none;
+    }
+
+    &.active{
+      color: $orange;
+      font-weight: 700;
+
+      svg{
+        display: block;
+      }
+    }
+  }
+
+}
